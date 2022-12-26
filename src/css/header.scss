@@ -1,0 +1,504 @@
+a{
+  text-decoration: none;
+}
+.header{
+  background: #FFFFFF;
+  .container{
+    max-width:1180px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    text-decoration: none
+  }
+  &__info{
+    display: none;
+  }
+  &__box{
+    display: none;
+  }
+  &__select2{
+    display: none;
+  }
+  &__logo{
+    &__home{
+      width: 100%;
+      height: 100%;
+    }
+    &-svg svg{
+      width: 100px;
+      height: 71px;
+    }
+  }
+  &__nav2{
+    display: none;
+    column-gap: 40px;
+    margin-left:63px ;
+    &__links{
+      display: flex;
+      column-gap: 6px;
+      &-svg{
+        display: flex;
+        align-self: center;
+      }
+    }
+    &__link{
+      @include text(normal,$f-weight500,$f-size14,$f-height17,$color00)
+    }
+  }
+  &__nav{
+    display: flex;
+    column-gap: 40px;
+    margin-left:63px ;
+    &__links{
+      display: flex;
+      column-gap: 6px;
+      &-svg svg{
+        display: flex;
+        align-self: center;
+      }
+    }
+    &__link{
+      @include text(normal,$f-weight500,$f-size14,$f-height17,$color00)
+    }
+  }
+  &__select{
+    display: flex;
+    margin-left: 67px;
+    column-gap: 10px;
+    &-svg svg{
+    }
+  }
+  &__number{
+    margin:42px auto 42px 40px;
+    text-decoration: none;
+    color: black;
+    @include text(normal,$f-weight500,$f-size16,$f-height26,$color00)
+  }
+  &__telephone{
+    text-decoration: none;
+  }
+  &__acc{
+    display: flex;
+    margin-left: 40px;
+    column-gap: 8px;
+    &-svg svg{
+      fill: #FFFFFF;
+    }
+    &-login{
+      @include text(normal,$f-weight500,$f-size14,$f-height17,$color00)
+    }
+  }
+  .select{
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    -webkit-appearance: none;
+    color: #00093C;
+    cursor: pointer;
+    padding: 5px;
+    text-decoration: #000000;
+    background: transparent;
+    &__wrapper{
+      position: relative;
+      background: transparent;
+      &::before{
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -15px;
+        transform: translateY(-50%);
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 4px 4px 0 4px;
+        border-color: #000000 transparent transparent transparent;
+        pointer-events: none;
+
+      }
+    }
+  }
+}
+.header2{
+  background: #00093C;
+  .container{
+    max-width:1180px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    text-decoration: none
+  }
+  &__info{
+    display: none;
+  }
+  &__box{
+    display: none;
+  }
+  &__select2{
+    display: none;
+  }
+  &__logo{
+    &__home{
+      width: 100%;
+      height: 100%;
+    }
+    &-svg svg{
+      width: 100px;
+      height: 71px;
+    }
+    &-svg path{
+     fill: #FFFFFF;
+    }
+  }
+  &__nav2{
+    display: none;
+    column-gap: 40px;
+    margin-left:63px ;
+    &__links{
+      display: flex;
+      column-gap: 6px;
+      &-svg{
+        display: flex;
+        align-self: center;
+      }
+    }
+    &__link{
+      @include text(normal,$f-weight500,$f-size14,$f-height17,$color01)
+    }
+  }
+  &__nav{
+    display: flex;
+    column-gap: 40px;
+    margin-left:63px ;
+    &__links{
+      display: flex;
+      column-gap: 6px;
+      &-svg svg{
+        display: flex;
+        align-self: center;
+        fill: #FFFFFF;
+      }
+    }
+    &__link{
+      @include text(normal,$f-weight500,$f-size14,$f-height17,$color01)
+    }
+  }
+  &__select{
+    display: flex;
+    margin-left: 67px;
+    column-gap: 10px;
+    &-svg svg{
+      fill: #FFFFFF;
+    }
+  }
+  &__number{
+    margin:42px auto 42px 40px;
+    text-decoration: none;
+    @include text(normal,$f-weight500,$f-size16,$f-height26,$color01)
+  }
+  &__acc{
+    display: flex;
+    margin-left: 40px;
+    column-gap: 8px;
+    &-svg svg{
+      fill: #FFFFFF;
+    }
+    &-login{
+      @include text(normal,$f-weight500,$f-size14,$f-height17,$color01)
+    }
+  }
+}
+.hamburger{
+  display: none;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  row-gap: 6px;
+  &__line{
+    width: 25px;
+    height: 2px;
+    background: #fff;
+    transition: .2s linear;
+  }
+  &__line:nth-child(even){
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    transition: .2s linear;
+  }
+  &_active{
+    position: relative;
+  }
+  &_active &__line{
+    transform: rotate(45deg);
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    &:nth-child(2){
+      display: none;
+    }
+    &:nth-child(1){
+      transform: rotate(-45deg);
+    }
+  }
+}
+.menu_active{
+  position: absolute;
+  background: white;
+  top: 60px;
+  left: -10px;
+  width: 320px;
+  height: 730px;
+  overflow: hidden;
+  flex-direction: column;
+  z-index: 1000;
+
+}
+.select{
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  -webkit-appearance: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  padding: 5px;
+  text-decoration: #000000;
+  background: transparent;
+  &__wrapper{
+    position: relative;
+    background: transparent;
+    &::before{
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -15px;
+      transform: translateY(-50%);
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 4px 4px 0 4px;
+      border-color: #FFFFFF transparent transparent transparent;
+      pointer-events: none;
+
+    }
+  }
+}
+.body__active{
+  overflow: hidden;
+}
+@media (max-width: 320px) {
+  .header2 {
+    position: relative;
+    background: #00093C;
+
+    &__acc2 {
+      display: flex;
+      margin-left: 0;
+      margin-bottom: 50px;
+      column-gap: 8px;
+    }
+
+    &__acc {
+      display: none;
+    }
+
+    &__aboutus__info {
+      display: flex;
+      row-gap: 12px;
+      margin-bottom: 25px;
+    }
+
+    &__aboutus__social {
+      display: flex;
+      column-gap: 40px;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    &__aboutus__yandex {
+      display: flex;
+    }
+
+    &__aboutus-yandex {
+      padding: 7.6px 10px;
+      border-radius: 8px;
+      border: 1px solid #00093C;
+    }
+
+    &__nav2 {
+      margin: 0 0 27px 0;
+      display: flex;
+    }
+
+    &__info {
+      display: flex;
+      width: 103px;
+      height: 266px;
+      margin-bottom: 2px;
+
+      &__li a {
+        @include text(normal, $f-weight400, 16px, 38px, $color00);
+      }
+    }
+
+    &__select2 {
+      display: flex;
+      margin-bottom: 35px;
+      column-gap: 10px;
+    }
+
+    &__box {
+      display: flex;
+      padding: 33px 30px 55px 10px;
+    }
+
+    .container {
+      max-width: 300px;
+      height: 60px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-decoration: none;
+      position: sticky;
+      top: 0;
+    }
+
+    &__logo {
+      &-svg path {
+        fill: #FFFFFF;
+      }
+
+      &-svg svg {
+        width: 57px;
+        height: 40.27px;
+      }
+    }
+
+    &__nav, &__number, &__select {
+      display: none;
+    }
+    .hamburger {
+      display: flex;
+    }
+    .menu {
+      display: none;
+    }
+    .menu_active {
+      display: flex;
+      z-index: 1000;
+    }
+  }
+  .header {
+    position: relative;
+    background: #00093C;
+
+    &__acc2 {
+      display: flex;
+      margin-left: 0;
+      margin-bottom: 50px;
+      column-gap: 8px;
+    }
+    &__acc {
+      display: none;
+    }
+
+    &__aboutus__info {
+      display: flex;
+      row-gap: 12px;
+      margin-bottom: 25px;
+    }
+
+    &__aboutus__social {
+      display: flex;
+      column-gap: 40px;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    &__aboutus__yandex {
+      display: flex;
+    }
+
+    &__aboutus-yandex {
+      padding: 7.6px 10px;
+      border-radius: 8px;
+      border: 1px solid #00093C;
+    }
+
+    &__nav2 {
+      margin: 0 0 27px 0;
+      display: flex;
+    }
+
+    &__info {
+      display: flex;
+      width: 103px;
+      height: 266px;
+      margin-bottom: 2px;
+
+      &__li a {
+        @include text(normal, $f-weight400, 16px, 38px, $color00);
+      }
+    }
+
+    &__select2 {
+      display: flex;
+      margin-bottom: 35px;
+      column-gap: 10px;
+    }
+
+    &__box {
+      display: flex;
+      padding: 33px 30px 55px 10px;
+    }
+
+    .container {
+      max-width: 300px;
+      height: 60px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-decoration: none;
+      position: sticky;
+      top: 0;
+    }
+
+    &__logo {
+      &-svg path {
+        fill: #FFFFFF;
+      }
+
+      &-svg svg {
+        width: 57px;
+        height: 40.27px;
+      }
+    }
+
+    &__nav, &__number, &__select {
+      display: none;
+    }
+  }
+  .hamburger {
+    display: flex;
+  }
+  .menu {
+    display: none;
+  }
+  .menu_active {
+    display: flex;
+    z-index: 10;
+  }
+
+}
+
+
